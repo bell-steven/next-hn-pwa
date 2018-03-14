@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
-import 'isomorphic-fetch'
+import 'isomorphic-unfetch'
 import Link from 'next/link'
 
 export default class extends Component {
   static async getInitialProps() {
-    const req = await fetch('https://api.hackerwebapp.com/news')
+    const req = await fetch('https://node-hnapi.herokuapp.com/news')
     const stories = await req.json()
     return { stories }
   }
