@@ -21,4 +21,4 @@ https://node-hnapi.herokuapp.com/
 
 This is very much a WIP.
 
-See live at next-hn-pwa-iddiuiiweu.now.sh
+See live at https://next-hn-pwa-iddiuiiweu.now.sh/
