@@ -1,8 +1,6 @@
 I built this to demonstrate the potential speed of a javascript web application.
 
-Built using 'create-next-app' and using SW-Precache for service workers.
-
-Zeit has a preact plugin for next.js, but it doesn't seem to be playing nicely with sw-precache.
+Built using 'create-next-app' with Preact and SW-Precache for service workers.
 
 Uses the Unofficial HN API
 https://node-hnapi.herokuapp.com/
