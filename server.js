@@ -1,6 +1,11 @@
 const port = parseInt(process.env.PORT, 10) || 3000
 const dev = process.env.NODE_ENV !== 'production'
 
+const moduleAlias = require('module-alias')
+
+moduleAlias.addAlias('react', 'preact-compat')
+moduleAlias.addAlias('react-dom', 'preact-compat')
+
 const { createServer } = require('http')
 const { join } = require('path')
 const { parse } = require('url')
