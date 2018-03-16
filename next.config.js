@@ -1,12 +1,23 @@
-const withPreact = require('@zeit/next-preact')
+const SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin')
 
-module.exports = withPreact({
+module.exports = {
   webpack: config => {
-    // Fixes npm packages that depend on `fs` module
+    config.plugins.push(
+      new SWPrecacheWebpackPlugin({
+        verbose: true,
+        staticFileGlobsIgnorePatterns: [/\.next\//],
+        runtimeCaching: [
+          {
+            handler: 'networkFirst',
+            urlPattern: /^https?.*/,
+          },
+        ],
+      })
+    )
     config.node = {
       fs: 'empty',
     }
 
     return config
   },
-})
+}

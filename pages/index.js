@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import 'isomorphic-unfetch'
 import Link from 'next/link'
+import Head from 'next/head'
 
 export default class extends Component {
   static async getInitialProps() {
@@ -8,6 +9,20 @@ export default class extends Component {
     const stories = await req.json()
     return { stories }
   }
+
+  componentDidMount() {
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker
+        .register('/service-worker.js')
+        .then(registration => {
+          console.log('service worker registration successful')
+        })
+        .catch(err => {
+          console.warn('service worker registration failed', err.message)
+        })
+    }
+  }
+
   render() {
     return (
       <ol
@@ -18,6 +33,17 @@ export default class extends Component {
           background: 'rgb(246, 246, 239)',
         }}
       >
+        <Head>
+          <meta charSet="utf-8" />
+          <meta
+            name="viewport"
+            content="initial-scale=1.0, width=device-width"
+          />
+          <meta name="theme-color" content="#297bee" />
+          <link rel="manifest" href="/static/manifest.webmanifest" />
+          <link rel="icon" href="/static/favicon.ico" type="image/x-icon" />
+          <title>HN Next.js PWA</title>
+        </Head>
         {this.props.stories.map(story => (
           <li key={story.id}>
             <div>
