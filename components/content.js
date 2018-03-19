@@ -6,49 +6,53 @@ const Content = props => (
   <div
     style={{
       fontFamily: 'Verdana, Geneva, sans-serif',
-      fontSize: '10pt',
-      color: '#828282',
-      background: 'rgb(246, 246, 239)',
+      fontSize: '11.5pt',
+      color: '#000000',
+      background: 'f6faff',
       maxWidth: 940,
       margin: 'auto',
     }}
   >
-    <Head />
-    <Nav />
-    <ol>
-      {props.data.map(story => (
-        <li key={story.id}>
-          <div>
-            <Link href={story.url}>
-              <a
-                target="_blank"
-                rel="noopener noreferrer nofollow"
-                style={{ color: '#000000', textDecoration: 'none' }}
-              >
-                {story.title}
-              </a>
-            </Link>
-            {story.domain && (
-              <Link href={story.domain}>
+    <header>
+      <Head />
+      <Nav />
+    </header>
+    <main>
+      <ol>
+        {props.data.map(story => (
+          <li key={story.id}>
+            <div>
+              <Link href={story.url}>
                 <a
                   target="_blank"
                   rel="noopener noreferrer nofollow"
-                  style={{ color: '#828282', textDecoration: 'none' }}
+                  style={{ color: '#000066', textDecoration: 'none' }}
                 >
-                  {' '}
-                  ({story.domain})
+                  {story.title}
                 </a>
               </Link>
-            )}
-            <div style={{ fontSize: '7pt' }}>
-              {story.points} points by {story.user} {story.time_ago} |{' '}
-              {story.comments_count} comments
+              {story.domain && (
+                <Link href={story.domain}>
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer nofollow"
+                    style={{ color: '#000000', textDecoration: 'none' }}
+                  >
+                    {' '}
+                    ({story.domain})
+                  </a>
+                </Link>
+              )}
+              <div style={{ fontSize: '8.5pt' }}>
+                {story.points} points by {story.user} {story.time_ago} |{' '}
+                {story.comments_count} comments
+              </div>
             </div>
-          </div>
-          <br />
-        </li>
-      ))}
-    </ol>
+            <br />
+          </li>
+        ))}
+      </ol>
+    </main>
   </div>
 )
 
