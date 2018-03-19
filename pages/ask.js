@@ -4,13 +4,13 @@ import Content from '../components/content'
 
 export default class extends Component {
   static async getInitialProps() {
-    const req = await fetch('https://node-hnapi.herokuapp.com/news')
+    const req = await fetch('https://node-hnapi.herokuapp.com/ask')
     const stories = await req.json()
     return { stories }
   }
 
   componentDidMount() {
-    if ('serviceWorker' in navigator) {
+    if ('serviceWorker' in navigator && !navigator.serviceWorker.state) {
       navigator.serviceWorker
         .register('/service-worker.js')
         .then(registration => {

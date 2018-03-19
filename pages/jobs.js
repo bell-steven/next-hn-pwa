@@ -4,7 +4,7 @@ import Content from '../components/content'
 
 export default class extends Component {
   static async getInitialProps() {
-    const req = await fetch('https://node-hnapi.herokuapp.com/news')
+    const req = await fetch('https://node-hnapi.herokuapp.com/jobs')
     const stories = await req.json()
     return { stories }
   }
