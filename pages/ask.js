@@ -9,18 +9,18 @@ export default class extends Component {
     return { stories }
   }
 
-  componentDidMount() {
-    if ('serviceWorker' in navigator && !navigator.serviceWorker.state) {
-      navigator.serviceWorker
-        .register('/service-worker.js')
-        .then(registration => {
-          console.log('service worker registration successful')
-        })
-        .catch(err => {
-          console.warn('service worker registration failed', err.message)
-        })
-    }
-  }
+  // componentDidMount() {
+  //   if ('serviceWorker' in navigator && !navigator.serviceWorker.state) {
+  //     navigator.serviceWorker
+  //       .register('/service-worker.js')
+  //       .then(registration => {
+  //         console.log('service worker registration successful')
+  //       })
+  //       .catch(err => {
+  //         console.warn('service worker registration failed', err.message)
+  //       })
+  //   }
+  // }
 
   render() {
     return <Content data={this.props.stories} />

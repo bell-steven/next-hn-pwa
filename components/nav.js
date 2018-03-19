@@ -8,7 +8,7 @@ export default props => (
       alignItems: 'center',
       background: 'orange',
       height: 25,
-      fontSize: 15,
+      fontSize: 16,
     }}
   >
     <Link prefetch href="/">

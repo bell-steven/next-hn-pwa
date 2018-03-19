@@ -4,9 +4,9 @@
   "private": true,
   "name": "next-hn-pwa",
   "scripts": {
-    "dev": "next",
+    "dev": "node server.js",
     "build": "next build",
-    "start": "next start"
+    "start": "NODE_ENV=production node server.js"
   },
   "dependencies": {
     "isomorphic-unfetch": "^2.0.0",
