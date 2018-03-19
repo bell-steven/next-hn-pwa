@@ -1,7 +1,16 @@
 import Link from 'next/link'
 
 export default props => (
-  <nav>
+  <nav
+    style={{
+      display: 'flex',
+      justifyContent: 'space-around',
+      alignItems: 'center',
+      background: 'orange',
+      height: 25,
+      fontSize: 15,
+    }}
+  >
     <Link prefetch href="/">
       <a>Home</a>
     </Link>
