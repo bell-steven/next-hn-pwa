@@ -9,4 +9,4 @@ https://node-hnapi.herokuapp.com/
 
 This is very much a WIP.
 
-See live at https://next-hn-pwa-reirewqnuu.now.sh/
+See live at https://next-hn-pwa-jgsaaypzgj.now.sh/
