@@ -1,20 +1,10 @@
 import Document, { Head, Main, NextScript } from 'next/document'
-import flush from 'styled-jsx/server'
-
-export default class MyDocument extends Document {
-  static getInitialProps({ renderPage }) {
-    const { html, head, errorHtml, chunks } = renderPage()
-    const styles = flush()
-    return { html, head, errorHtml, chunks, styles }
-  }
-
+export default class extends Document {
   render() {
     return (
       <html lang="en">
-        <Head>
-          <style>{`body { margin: 0 }`}</style>
-        </Head>
-        <body>
+        <Head />
+        <body style={{ margin: 0 }}>
           <Main />
           <NextScript />
         </body>

@@ -7,7 +7,7 @@ export default props => (
       justifyContent: 'space-around',
       alignItems: 'center',
       background: 'orange',
-      height: 25,
+      height: 35,
       fontSize: 16,
     }}
   >

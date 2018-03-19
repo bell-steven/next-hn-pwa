@@ -6,7 +6,7 @@ const Content = props => (
   <div
     style={{
       fontFamily: 'Verdana, Geneva, sans-serif',
-      fontSize: '11.5pt',
+      fontSize: '12pt',
       color: '#000000',
       background: 'f6faff',
       maxWidth: 940,
