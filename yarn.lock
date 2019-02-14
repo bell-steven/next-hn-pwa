@@ -3268,9 +3268,9 @@ mkdirp-then@1.2.0:
   dependencies:
     minimist "0.0.8"
 
-module-alias@^2.0.3, module-alias@^2.0.6:
-  version "2.0.6"
-  resolved "https://registry.yarnpkg.com/module-alias/-/module-alias-2.0.6.tgz#abb2cfa07014f503514ad5061c6f03d79b591889"
+module-alias@^2.0.3, module-alias@^2.2.0:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/module-alias/-/module-alias-2.2.0.tgz#a2e32275381642252bf0c51405f7a09a367479b5"
 
 moment@^2.11.2:
   version "2.21.0"
