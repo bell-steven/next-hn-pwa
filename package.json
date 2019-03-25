@@ -14,7 +14,7 @@
     "next-preact": "^0.0.6",
     "preact": "^8.2.7",
     "preact-compat": "^3.18.0",
-    "react": "^16.2.0",
+    "react": "^16.8.5",
     "react-dom": "^16.2.0",
     "sw-precache-webpack-plugin": "^0.11.5"
   },
