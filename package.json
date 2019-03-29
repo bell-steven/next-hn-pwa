@@ -15,7 +15,7 @@
     "preact": "^8.2.7",
     "preact-compat": "^3.18.0",
     "react": "^16.2.0",
-    "react-dom": "^16.2.0",
+    "react-dom": "^16.8.6",
     "sw-precache-webpack-plugin": "^0.11.5"
   },
   "devDependencies": {
