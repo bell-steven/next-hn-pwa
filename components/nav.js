@@ -1,6 +1,6 @@
-import Link from 'next/link'
+import Link from 'next/link';
 
-export default props => (
+const NavBar = (props) => (
   <nav
     style={{
       display: 'flex',
@@ -11,20 +11,22 @@ export default props => (
       fontSize: 16,
     }}
   >
-    <Link prefetch href="/">
+    <Link href="/">
       <a>Home</a>
     </Link>
-    <Link prefetch href="/new">
+    <Link href="/new">
       <a>Newest</a>
     </Link>
-    <Link prefetch href="/show">
+    <Link href="/show">
       <a>Show</a>
     </Link>
-    <Link prefetch href="/ask">
+    <Link href="/ask">
       <a>Ask</a>
     </Link>
-    <Link prefetch href="/jobs">
+    <Link href="/jobs">
       <a>Jobs</a>
     </Link>
   </nav>
-)
+);
+
+export default NavBar;

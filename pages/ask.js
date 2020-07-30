@@ -1,28 +1,17 @@
-import React, { Component } from 'react'
-import 'isomorphic-unfetch'
-import Content from '../components/content'
+import Content from '../components/content';
 
-export default class extends Component {
-  static async getInitialProps() {
-    const req = await fetch('https://node-hnapi.herokuapp.com/ask')
-    const stories = await req.json()
-    return { stories }
-  }
+const Ask = ({ stories }) => <Content data={stories} />;
 
-  // componentDidMount() {
-  //   if ('serviceWorker' in navigator && !navigator.serviceWorker.state) {
-  //     navigator.serviceWorker
-  //       .register('/service-worker.js')
-  //       .then(registration => {
-  //         console.log('service worker registration successful')
-  //       })
-  //       .catch(err => {
-  //         console.warn('service worker registration failed', err.message)
-  //       })
-  //   }
-  // }
+export async function getStaticProps() {
+  const res = await fetch('https://node-hnapi.herokuapp.com/ask');
+  const stories = await res.json();
 
-  render() {
-    return <Content data={this.props.stories} />
-  }
+  return {
+    props: {
+      stories,
+    },
+    revalidate: 1,
+  };
 }
+
+export default Ask;
